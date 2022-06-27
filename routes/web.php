@@ -29,6 +29,7 @@ Route::resource("/structure", StructureController::class);
 Route::get('/ajouter','App\Http\Controllers\ajoutController@ajout');
 Route::get('/envoyer','App\Http\Controllers\ajoutController@envoie');
 Route::get('/contacts','App\Http\Controllers\ajoutController@contacts');
+Route::post('/envoyer','App\Http\Controllers\ajoutController@store');
 
 
 require __DIR__.'/auth.php';

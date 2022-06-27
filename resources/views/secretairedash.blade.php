@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"> 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -145,7 +147,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>courriers</h3>
+                <h3>1-courriers</h3>
                 <br>
                 <p>   </p>
               </div>
@@ -160,7 +162,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>ST</h3>
+                <h3>2-ST</h3>
                 <br>
                 <p></p>
               </div>
@@ -175,7 +177,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>lettres</h3>
+                <h3>3-lettres</h3>
                 <br>
                 <p></p>
               </div>
@@ -190,7 +192,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>Divers</h3>
+                <h3>4-Divers</h3>
                 <br>
                 <p></p>
               </div>
@@ -205,6 +207,11 @@
         
          
       </div><!-- /.container-fluid -->
+      <div>
+      <h2 class="m-0"></h2>
+      <br><br>
+      @include('layouts.messages')
+      </div>
     </section>
     <!-- /.content -->
   </div>
@@ -258,6 +265,13 @@
 <!-- AdminLTE for demo purposes -->
 
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script >
+                $(document).ready( function () {
+                $('#myTable1').DataTable();
+                } );
+        </script>
 
 </body>
 </html>           

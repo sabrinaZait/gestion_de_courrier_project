@@ -27,4 +27,5 @@ class ajoutController extends Controller
             Message::envoie($input);
             return redirect('layouts.envoyer')->with('flash_message', 'Courrier envoye!');  
         }
+        
 }

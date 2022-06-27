@@ -30,13 +30,14 @@
             <form>
               <div class="card-body">
               <div class="form-group">
-                  <label>Date:</label>
-                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                        </div>
-                    </div>
+                  <label>Registre</label>
+                  <select class="select2 select2-hidden-accessible" multiple="" data-placeholder="choisissez un registre" style="width: 100%;" data-select2-id="7" tabindex="-1" aria-hidden="true">
+                    <option value="1">Courriers</option>
+                    <option value="2">Soit transmis</option>
+                    <option value="3">Lettres</option>
+                    <option value="4">Divers</option>
+                    
+                  </select>
                 </div>
               
              

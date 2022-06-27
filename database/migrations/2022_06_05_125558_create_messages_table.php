@@ -28,6 +28,12 @@ return new class extends Migration
                 ->nullable()
                 ->onUpdate('cascade')
                  ->onDelete('cascade');
+            $table->foreignId('destinataire_id')
+                 ->constraind('users')
+                 ->nullable()
+                 ->onUpdate('cascade')
+                  ->onDelete('cascade');
+      
 
             $table->timestamps();
         });

@@ -26,34 +26,46 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form>
+            <form action="{{url('envoyer')}}" methode="POST">
               <div class="card-body">
               
               <div class="form-group">
                   <label for="exampleInputPassword1">de</label>
-                  <input type="text" class="form-control" id="" value="{{ Auth::user()->email }}" disabled>
+                  <input type="text" class="form-control" id="expediteur_id" name="expediteur_id" value="{{ Auth::user()->email }}" disabled>
                 </div>
               <div class="form-group" data-select2-id="29">
                   <label>Destination</label>
-                  <select class="select2 select2-hidden-accessible" multiple="" data-placeholder="select a destination" style="width: 100%;" data-select2-id="7" tabindex="-1" aria-hidden="true">
+                  <select id="destinataire_id" name="destinataire_id" class="select2 select2-hidden-accessible" multiple="" data-placeholder="select a destination" style="width: 100%;" data-select2-id="7" tabindex="-1" aria-hidden="true">
                     @foreach($destination as $item)
                     @if($item->email !=  Auth::user()->email) 
-                      <option value="{{$item->id}}">{{$item->email}}</option>
+                      <option  name="destinataire_id" value="{{$item->id}}">{{$item->email}}</option>
                     @endif
                     @endforeach
                   </select>
                 </div>
                 <div class="form-group">
+                  <label>Registre</label>
+                  <select  placeholder="choisissez un registre" style="width: 100%;height:40px;border-radius: 7px;border-color:grey;"  aria-hidden="true">
+                    <option id="register_id"  value="1">Courriers</option>
+                    <option id="register_id"  value="2">Soit transmis</option>
+                    <option id="register_id"  value="3">Lettres</option>
+                    <option id="register_id"  value="4">Divers</option>
+                    
+                  </select>
+                </div>
+              
+             
+                <div class="form-group">
                   <label for="exampleInputPassword1">objet</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" >
+                  <input id="objet" name="objet" type="text" class="form-control" id="exampleInputPassword1" >
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">reference</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" >
+                  <input id="code" name="code" type="text" class="form-control" id="exampleInputPassword1" >
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Contenue</label>
-                  <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                  <textarea id="contenue" name="contenue" class="form-control" rows="3" placeholder="Enter ..."></textarea>
                 </div>
                 
                 
@@ -72,7 +84,7 @@
               <!-- /.card-body -->
 
               <div class="card-footer">
-                <button type="submit" class="btn btn-warning">Envoyer</button>
+                <button type="submit"  class="btn btn-warning">Envoyer</button>
               </div>
             </form>
           </div>
